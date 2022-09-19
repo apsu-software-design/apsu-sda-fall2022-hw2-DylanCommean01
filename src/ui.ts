@@ -182,6 +182,7 @@ function showModifyGatheringMenu(em:GatheringManager, gatheringName?:string) {
     if(response == 1){
       let newTitle = readlineSync.question('  New title: ');
       em.modifyGathering(gatheringName, newTitle);
+      gatheringName = newTitle;
     }
     else if(response == 2){
       let newTime = readlineSync.question('  New date and time (ex: Jan 21 2017 13:00 PST): ');
